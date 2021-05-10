@@ -21,7 +21,7 @@ correction(n,q) = {
 for(k = 0, q, alpha = ffprimroot(f);
 for(j = 0, n, err = List(); pade = bestapprPade(Mod(s(y,alpha,j),x^(2*t))); R = numerator(pade); E = denominator(pade); \\on a les éléments de Pade
 for(i = 0, n-1 , P = subst(E,'x,alpha^(-i)); if(P==0, val = subst(R/deriv(E) * (x^(j-1)), 'x , alpha^(-i)); listput(err, fqx2int(val,f)););
-if(#err >10 /*valeur determinee empiriquement*/, print(Strch(Vec(err)));return;);
+if(#err >10 /*valeur determinee empiriquement*/, print(Strchr(Vec(err)));return;);
 );
 );
 );
